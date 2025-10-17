@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Height Weight Predictor</title>
+    </head>
+    <body>
+        {% raw%}<!-- {{url_for('function_name')}}  name of function which we want to call-->{%endraw%}
+        <form action="{{url_for('prediction')}}" method="post">
+            <label for="Temperature">Temperature: </label>
+            <input id="Temperature" name="Temperature" placeholder="Temperature" type="text" required="required"/><br>
+
+            <label for="RH">RH: </label>
+            <input id="RH" name="RH" placeholder="RH" type="text" required="required"/><br>
+
+            <label for="Ws">Ws: </label>
+            <input id="Ws" name="Ws" placeholder="Ws" type="text" required="required"/><br>
+
+            <label for="Rain">Rain: </label>
+            <input id="Rain" name="Rain" placeholder="Rain" type="text" required="required"/><br>
+
+            <label for="FFMC">FFMC: </label>
+            <input id="FFMC" name="FFMC" placeholder="FFMC" type="text" required="required"/><br>
+
+            <label for="DMC">DMC: </label>
+            <input id="DMC" name="DMC" placeholder="DMC" type="text" required="required"/><br>
+
+            <label for="DC">DC: </label>
+            <input id="DC" name="DC" placeholder="DC" type="text" required="required"/><br>
+
+            <label for="ISI">ISI: </label>
+            <input id="ISI" name="ISI" placeholder="ISI" type="text" required="required"/><br>
+
+            <label for="BUI">BUI: </label>
+            <input id="BUI" name="BUI" placeholder="BUI" type="text" required="required"/><br>
+
+            <button type="Submit" class="btn btn-primary btn-block btn-large">PREDICT</button>
+
+        </form>
+
+        <h2>The Predicted FWI value is : {{result}}</h2>
+    </body>
+</html>
